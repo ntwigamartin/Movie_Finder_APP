@@ -5,8 +5,8 @@ function MovieListing({title, year}){
         <div>
             <ul>
                 <li>
-                    <h2>Movie Title: {title} </h2>
-                    <h2>Year: {year}</h2>
+                    <h3>Movie Title: {title} </h3>
+                    <h4>Year: {year}</h4>
                 </li>
             </ul>
         </div>

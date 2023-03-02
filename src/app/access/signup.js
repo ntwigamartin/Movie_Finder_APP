@@ -1,0 +1,54 @@
+import React from "react";
+import { useState } from "react";
+
+function SignUp({onFormSwitch}){
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [name, setName] = useState("")
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(email);
+    }
+    
+    return (
+        <>
+        <form onSubmit={handleSubmit} >
+            <label htmlFor="name">Full Name</label>
+            <input 
+             type="text"
+             required 
+             name="name" 
+             id="name" 
+             placeholder="Your full name" 
+             value={name} 
+             onChange={(e)=>setName(e.target.value)} />
+
+            <label htmlFor="email">Email</label>
+            <input 
+             type="email"
+             required 
+             name="email" 
+             id="email" 
+             placeholder="youremail@mail.com" 
+             value={email} 
+             onChange={(e)=>setEmail(e.target.value)} />
+            
+            <label htmlFor="password">Password</label>
+            <input
+             type="password"
+             required 
+             name="password" 
+             id="password" 
+             placeholder="****" 
+             value={password} 
+             onChange={(e)=>setPassword(e.target.value)}/>
+
+            <button type="submit">Signup</button>
+        </form>
+            <button onClick={()=>onFormSwitch('login')} >Already have an account? Sign in here!</button> 
+        </>
+    )
+}
+
+export default SignUp;
