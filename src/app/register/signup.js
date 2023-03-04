@@ -8,11 +8,26 @@ function SignUp({onFormSwitch}){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(email);
+
+        fetch("http://127.0.0.1:9292/users", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                password: password
+
+            })
+        })
+            .then(r=>r.json())
+            .then(data=>console.log(data))
     }
     
     return (
-        <>
+        <div className="register_forms">
+            <h2>Sign Up</h2>
         <form onSubmit={handleSubmit} >
             <label htmlFor="name">Full Name</label>
             <input 
@@ -46,8 +61,8 @@ function SignUp({onFormSwitch}){
 
             <button type="submit">Signup</button>
         </form>
-            <button onClick={()=>onFormSwitch('login')} >Already have an account? Sign in here!</button> 
-        </>
+            <button className="toggle-btn" onClick={()=>onFormSwitch('login')} >Already have an account? Sign in here!</button> 
+        </div>
     )
 }
 

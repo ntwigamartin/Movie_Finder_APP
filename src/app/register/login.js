@@ -7,11 +7,11 @@ function Login({onFormSwitch}){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(email);
     }
     
     return (
-        <>
+        <div className="register_forms">
+            <h2>Login</h2>
         <form onSubmit={handleSubmit} >
             <label htmlFor="email">Email</label>
             <input 
@@ -33,10 +33,10 @@ function Login({onFormSwitch}){
              value={password} 
              onChange={(e)=>setPassword(e.target.value)}/>
 
-            <button type="submit">Login</button>
+            <button type="submit">Log In</button>
         </form>
-            <button onClick={()=>onFormSwitch('signup')} >Dont have an account? Sign up here!</button> 
-        </>
+            <button className="toggle-btn" onClick={()=>onFormSwitch('signup')} >Dont have an account? Sign up here!</button> 
+        </div>
     )
 }
 

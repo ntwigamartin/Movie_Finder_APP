@@ -1,0 +1,19 @@
+.movie-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.movie-list {
+    border: 1px solid #786d6d;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #8b7f7f;
+}
+
+.movie-list > h4 {
+    margin: 0.5%;
+}

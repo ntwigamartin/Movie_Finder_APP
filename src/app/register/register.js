@@ -1,9 +1,10 @@
 import React from "react";
 import { useState } from "react";
+import './register.css'
 import Login from './login'
 import SignUp from "./signup";
 
-function AccessManager() {
+function Register() {
     const [currentForm, setCurrentForm] = useState('login')
 
     const toggleForm = (formName) => {
@@ -11,10 +12,10 @@ function AccessManager() {
     }
     
     return(
-        <div>
+        <div className="form_container">
             {currentForm === 'login' ? <Login onFormSwitch={toggleForm} /> : <SignUp onFormSwitch={toggleForm} />}
         </div>
     )
 }
 
-export default AccessManager;
+export default Register;

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 import MovieListing from './movielisting'
+import './movie.css'
 
 function GetMovies (){
     const [movies, setMovies] = useState([])
@@ -22,7 +23,7 @@ function GetMovies (){
         )
     })
     return (
-        <div>
+        <div className='movie-container'>
             {listmovies}
         </div>
     )
