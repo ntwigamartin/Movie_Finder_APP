@@ -2,8 +2,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 30%;
+    padding-right:30%;
+}
+
+.movie-container > h2 {
+    text-align: center;
 }
 
 .movie-list {
@@ -12,8 +16,13 @@
     display: flex;
     flex-direction: column;
     background-color: #8b7f7f;
+    margin: 1rem;
 }
 
 .movie-list > h4 {
     margin: 0.5%;
 }
+
+.movie-list > h2 {
+    text-decoration: underline;
+  }

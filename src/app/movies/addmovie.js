@@ -4,6 +4,7 @@ import { useState } from "react";
 function AddMovie(){
     const [title, setTitle] = useState("")
     const [year, setYear] = useState("")
+    const [addedMovie, setAddedMovie] = useState({})
 
 
     const handleSubmit = (e) => {
@@ -20,9 +21,11 @@ function AddMovie(){
             })
         })
             .then(r=>r.json())
-            .then(data=>console.log(data))
+            .then(data=>
+                setAddedMovie(data)
+                )
     }
-    
+   
     return (
         <div className="form_container">
             <div className="register_forms">
@@ -36,6 +39,11 @@ function AddMovie(){
 
                     <button type="submit">Submit</button>
                 </form>
+                <div className="movie-list">
+                    <h2>Added Movie</h2>
+                    <h4>Movie Title:{addedMovie.title}</h4>
+                    <h4>Year:{addedMovie.year}</h4>
+                </div>
             </div>
         </div>
     )
