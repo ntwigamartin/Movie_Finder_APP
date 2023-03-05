@@ -5,9 +5,8 @@ import './navbar.css'
 function Navbar(){
     return(
         <nav>
-            <Link to="/" >Home</Link>
-            <Link to="/getmovies" >All Movies</Link>
-            <Link to="/addmovie" >Add Movie</Link>
+            <h3>Movie Finder</h3>
+            <Link to="/" >Logout</Link>
         </nav>
     )
 }

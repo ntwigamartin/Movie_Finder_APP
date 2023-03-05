@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 import MovieListing from './movielisting'
+import AddMovie from './addmovie'
 import './movie.css'
 
 function GetMovies (){
@@ -32,11 +33,17 @@ function GetMovies (){
     
 
     return (
-        <div className='movie-container'>
-            <input type="text" placeholder='search movies here' value={searchTerm} onChange={(e)=>setSearchTerm(e.target.value)} />
-            <h2>List of All Movies</h2>
-            {listmovies}
-            {/* {displayedmovies.map(m=>( */}
+        <div className='main'>
+            <div className='movie-container'>
+                <input type="text" placeholder='search movies here' value={searchTerm} onChange={(e)=>setSearchTerm(e.target.value)} />
+                <h2>List of All Movies</h2>
+                <div className='list-container'>
+                   {listmovies}
+                </div>
+            </div>
+            <div>
+                <AddMovie />
+            </div>
         </div>
     )
 

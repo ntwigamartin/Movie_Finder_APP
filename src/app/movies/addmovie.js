@@ -29,7 +29,7 @@ function AddMovie(){
     return (
         <div className="form_container">
             <div className="register_forms">
-                <h2>Enter Movie Details</h2>
+                <h2>Add New Movie</h2>
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="title">Title</label>
                     <input type="text" name="title" placeholder="movie title" value={title} onChange={(e)=>setTitle(e.target.value)} />
