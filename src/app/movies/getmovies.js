@@ -9,7 +9,7 @@ function GetMovies (){
     const [searchTerm, setSearchTerm] = useState("")
     
     useEffect(()=> {
-        fetch("http://127.0.0.1:9292/movies")
+        fetch("https://sinemazone.onrender.com/movies")
         .then(res=>res.json())
         .then(data=>setMovies(data)) 
     },[])

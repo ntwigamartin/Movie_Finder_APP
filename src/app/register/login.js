@@ -12,7 +12,7 @@ function Login({onFormSwitch}){
     async function handleSubmit(event) {
         event.preventDefault();
         try {
-          const response = await axios.post('http://127.0.0.1:9292/authenticate', { email, password });
+          const response = await axios.post('https://sinemazone.onrender.com/authenticate', { email, password });
           console.log(response.data);
           setError("")
           
