@@ -14,11 +14,7 @@ function Login({onFormSwitch}){
         try {
           const response = await axios.post('https://sinemazone.onrender.com/authenticate', { email, password });
           console.log(response.data);
-          setError("")
-          
-          if (error === "") {
-            navigate('/getmovies');
-        }
+          navigate('/getmovies')
 
         } catch (error) {
           setError('Invalid email or password');
