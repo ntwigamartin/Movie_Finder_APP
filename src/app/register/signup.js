@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function SignUp({onFormSwitch}){
     const [email, setEmail] = useState("")
@@ -22,8 +24,15 @@ function SignUp({onFormSwitch}){
             })
         })
             .then(r=>r.json())
-            .then(data=>console.log(data))
+            .then(data=>{
+                console.log(data);
+                toast.success('Success, Proceed to login!');
+                onFormSwitch('login')
+            })
+
+            
     }
+    
     
     return (
         <div className="register_forms">

@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Login({onFormSwitch}){
     const [email, setEmail] = useState("");
@@ -13,9 +15,10 @@ function Login({onFormSwitch}){
         event.preventDefault();
         try {
           const response = await axios.post('https://sinemazone.onrender.com/authenticate', { email, password });
-          console.log(response.data);
           navigate('/getmovies')
-
+          toast.success('Welcome, Great Stuff here!');
+          console.log(response.data);
+          
         } catch (error) {
           setError('Invalid email or password');
         }
