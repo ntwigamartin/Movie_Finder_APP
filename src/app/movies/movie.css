@@ -38,4 +38,12 @@
 
 .movie-list > h2 {
     text-decoration: underline;
-  }
+}
+
+.added-movie-btn {
+    margin-top: 10px;
+}
+
+.added-movie-btn > button {
+    margin: 5px;
+}

@@ -81,7 +81,7 @@ function AddMovie() {
             <h4>Movie Title: {addedMovie.title}</h4>
             <h4>Year: {addedMovie.year}</h4>
 
-            <div>
+            <div className="added-movie-btn">
               <button onClick={handleEdit}>Edit</button>
               <button onClick={handleDelete}>Delete</button>
             </div>
